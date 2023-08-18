@@ -31,3 +31,10 @@
   left: 195px;
 }
 
+.secondary-row {
+  width : 400px;
+  height: 100px;
+  position: absolute;
+  background-color: rgba(200,200, 200, 0.15);
+  pointer-events: none;
+}
