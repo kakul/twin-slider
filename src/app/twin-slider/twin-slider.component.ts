@@ -11,4 +11,10 @@ export class TwinSliderComponent {
   @Input() leftCol: any[]
   @Input() rightCol: any[]
   title = 'twin-slider'
+  handleSelectLeft = (e: any) => {
+    console.log(this.leftCol[parseInt(e)])
+  }
+  handleSelectRight = (e: any) => {
+    console.log(this.rightCol[parseInt(e)])
+  }
 }

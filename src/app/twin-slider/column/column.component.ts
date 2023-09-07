@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild } from '@angular/core'
+import { Component, Input, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core'
 import KeenSlider, { KeenSliderInstance } from 'keen-slider'
 
 @Component({
@@ -11,6 +11,7 @@ import KeenSlider, { KeenSliderInstance } from 'keen-slider'
 })
 export class ColumnComponent {
   @Input() slides : any[] = []
+  @Output() slideEmitter = new EventEmitter<string>;
   @ViewChild('sliderRef') sliderRef: ElementRef<HTMLElement>
   slider: KeenSliderInstance | null  = null
   selectedIndex: number = 0
@@ -39,6 +40,7 @@ export class ColumnComponent {
         this.selectedIndex = rel
         const slide = slides[this.selectedIndex]
         slide.classList.add('selected')
+        this.slideEmitter.emit(this.selectedIndex.toString())
       }
     })
   }

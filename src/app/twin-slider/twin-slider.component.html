@@ -5,8 +5,8 @@
   </div>
   <div class="column-container">
     <div class="secondary-row"></div>
-    <column [slides]=leftCol></column>
-    <column [slides]=rightCol></column>
+    <column [slides]=leftCol (slideEmitter)="handleSelectLeft($event)"></column>
+    <column [slides]=rightCol (slideEmitter)="handleSelectRight($event)"></column>
     <div class="chevron-container">
       <div>
         <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
