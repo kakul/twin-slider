@@ -29,14 +29,9 @@ export class MainComponent {
     'Earnr Wallet\n3.80% p.a',
     'Earnr Notice\n5.50% p.a',
     'Earnr 3 Month\n6.00% p.a',
-    'Earnr Wallet\n3.80% p.a',
-    'Earnr Notice\n5.50% p.a',
-    'Earnr 3 Month\n6.00% p.a',
-    'Earnr Wallet\n3.80% p.a',
-    'Earnr Notice\n5.50% p.a',
-    'Earnr 3 Month\n6.00% p.a',
-    'Earnr Wallet\n3.80% p.a',
-    'Earnr Notice\n5.50% p.a',
-    'Earnr 3 Month\n6.00% p.a'
+    'Earnr Wallet\n3.80% p.a'
   ]
+  handleLeftEmit = (e: any) => {
+    this.interestRates.push('Earnr 3 Month\n16.00% p.a')
+  }
 }
